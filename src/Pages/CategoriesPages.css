@@ -57,13 +57,13 @@
   
   @media (max-width: 768px) {
     .add-cuisine-button {
-      width: 60px !important; /* Smaller width for mobile */
-      height: 60px !important; /* Smaller height for mobile */
-      font-size: 8px; /* Adjust the font size */
-      border-radius: 30px; /* Make it circular */
-      bottom: 20px; /* Position at the bottom */
-      top: auto; /* Disable top positioning */
-      right: 20px; /* Keep it slightly away from the edge */
+      width: 60px !important; 
+      height: 60px !important; 
+      font-size: 8px;
+      border-radius: 30px;
+      bottom: 20px; 
+      top: auto;
+      right: 20px; 
       background-color: rgb(12, 95, 16);
       text-align: center;
       border:2px solid white
@@ -132,14 +132,14 @@
     border: 1px solid black;
   }
   
-  /* Mobile Responsive Styles */
+
   @media (max-width: 768px) {
     .search-box {
-      position: relative; /* Remove absolute positioning */
-      top: auto; /* Reset top positioning */
-      right: 0px; /* Reset right positioning */
-      width: 100vh !important; /* Set fixed width for mobile */
-      margin: 0 auto; /* Center align horizontally */
+      position: relative; 
+      top: auto; 
+      right: 0px; 
+      width: 100vh !important; 
+      margin: 0 auto;
       display: block; 
     }
   }

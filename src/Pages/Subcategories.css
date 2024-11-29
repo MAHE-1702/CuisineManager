@@ -23,11 +23,11 @@
   
   @media (max-width: 768px) {
     .search-box {
-      position: relative; /* Remove absolute positioning */
-      top: auto; /* Reset top positioning */
-      right: 0px; /* Reset right positioning */
-      width: 100vh; /* Set fixed width for mobile */
-      margin: 0 auto; /* Center align horizontally */
+      position: relative;
+      top: auto;
+      right: 0px;
+      width: 100vh; 
+      margin: 0 auto;
       display: block; 
     }
   }
