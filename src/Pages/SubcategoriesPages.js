@@ -31,7 +31,7 @@ function SubcategoriesPages() {
   }, [searchQuery, subcategories]);
 
   const fetchSubcategories = () => {
-    axios.get("http://localhost:3000/api/subcategories/getall")
+    axios.get("https://cuisinemanagerbackend.onrender.com/api/subcategories/getall")
       .then((response) => {
         setSubcategories(response.data);
         setFilteredSubcategories(response.data); 
@@ -40,7 +40,7 @@ function SubcategoriesPages() {
   };
 
   const fetchCategories = () => {
-    axios.get("http://localhost:3000/api/categories/getall")
+    axios.get("https://cuisinemanagerbackend.onrender.com/api/categories/getall")
       .then(response => setCategories(response.data))
       .catch(error => console.error('Failed to fetch categories', error));
   };
@@ -62,7 +62,7 @@ function SubcategoriesPages() {
       categories: values.categories,
     };
 
-    axios.post("http://localhost:3000/api/subcategories/create", newSubcategories)
+    axios.post("https://cuisinemanagerbackend.onrender.com/api/subcategories/create", newSubcategories)
       .then((response) => {
         setShowModal(false);
         fetchSubcategories(); 
@@ -88,12 +88,12 @@ function SubcategoriesPages() {
       <Container className="mt-4">
         {filteredSubcategories.map((sub) => (
           <Card style={{ width: '18rem' }} className="shadow" key={sub._id}>
-            <Card.Img
+            {/* <Card.Img
               variant="top"
-              src={sub.image}
+              src={`https://cuisinemanagerbackend.onrender.com/${sub.image}`}
               alt={sub.title}
               style={{ height: '180px', objectFit: 'cover' }}
-            />
+            /> */}
             <Card.Body className="text-center">
               <Card.Title>{sub.title}</Card.Title>
               <Card.Text>

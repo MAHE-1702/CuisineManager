@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Card, Button, Modal, Alert, Form, FormControl } from "react-bootstrap";
 import { Formik, Field, Form as FormikForm } from "formik";
+
 import * as Yup from "yup";
 import './CuisinesPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -29,7 +30,7 @@ function CuisinesPage() {
 
   const fetchCuisines = () => {
     axios
-      .get("http://localhost:3000/api/cuisines/getall")
+      .get("https://cuisinemanagerbackend.onrender.com/api/cuisines/getall")
       .then((response) => setCuisines(response.data))
       .catch((error) => console.error("Failed to fetch cuisines", error));
   };
@@ -40,7 +41,7 @@ function CuisinesPage() {
     formData.append("image", values.image);
 
     axios
-      .post("http://localhost:3000/api/cuisines/create", formData, {
+      .post("https://cuisinemanagerbackend.onrender.com/api/cuisines/create", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -82,7 +83,7 @@ function CuisinesPage() {
           <Card className="shadow" key={cuisine._id}>
             <Card.Img
               variant="top"
-              src={cuisine.image}
+              src={`https://cuisinemanagerbackend.onrender.com/${cuisine.image}`}
               alt={cuisine.title}
               style={{ height: "180px", objectFit: "cover" }}
             />
