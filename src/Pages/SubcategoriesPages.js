@@ -105,7 +105,7 @@ function SubcategoriesPages() {
       </Container>
 
       <Button variant="primary" className="add-cuisine-button" onClick={() => setShowModal(true)}>
-        Add New Subcategory
+        Add New 
       </Button>
 
       

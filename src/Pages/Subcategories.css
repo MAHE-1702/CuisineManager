@@ -21,4 +21,14 @@
     border: 1px solid black;
   }
   
+  @media (max-width: 768px) {
+    .search-box {
+      position: relative; /* Remove absolute positioning */
+      top: auto; /* Reset top positioning */
+      right: 0px; /* Reset right positioning */
+      width: 100vh; /* Set fixed width for mobile */
+      margin: 0 auto; /* Center align horizontally */
+      display: block; 
+    }
+  }
   

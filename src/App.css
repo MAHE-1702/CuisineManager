@@ -1,59 +1,140 @@
-body{
-  background-image: url('./Utils/green\ background.webp');
+/* Global Styles */
+body {
+  background-image: url('./Utils/green background.webp');
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-size: cover; /* Ensures the image covers the full screen */
-  background-repeat: no-repeat; /* Prevents tiling of the image */
-  background-position: center center; /* Centers the image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-attachment: fixed;
 }
 
-.navigation {
-    background-color: #e8f5e8; 
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* Navbar */
+.navbar {
+  background-color: #e8f5e8;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-weight: 700;
+  color: #2e7d32;
+  font-size: 1.5rem;
+  transition: font-size 0.3s ease;
+}
+
+/* Navbar Toggler (hamburger) */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #2e7d32; /* Green color for the toggler icon */
+  width: 30px;
+  height: 2px;
+  position: relative;
+  display: block;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  background-color: #2e7d32;
+  width: 30px;
+  height: 2px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+  top: -7px;
+}
+
+.navbar-toggler-icon::after {
+  bottom: -7px;
+}
+
+/* Navbar Links */
+.navbar-nav {
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #2e7d32;
+  background-color: rgba(46, 125, 50, 0.1);
+}
+
+.nav-link.selected {
+  color: #fff;
+  background-color: #2e7d32;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  /* Stack the navbar content */
+  .navbar-collapse {
+    background-color: #e8f5e8; /* Match navbar background */
+    padding: 10px 0;
+    width: 100%; /* Full width on small screens */
   }
-  
-  .title {
-    font-weight: 700 !important;
-    color: #2e7d32 !important;
-    margin-left: -300px;
-    margin-top: 10px;;
+
+  .nav-link {
+    display: block; /* Stack links vertically */
+    width: 100%; /* Make links take full width */
+    text-align: center; /* Center align links */
+    padding: 10px 0;
+    font-size: 1.1rem;
   }
-  
-  .items .option {
-    font-weight: 500;
-    color: #333 !important; 
-    padding: 8px 15px;
-    border-radius: 4px; 
-    transition: background-color 0.3s ease, color 0.3s ease;
+
+  .navbar-toggler {
+    display: block; /* Make the toggler button visible on mobile */
   }
-  
-  .items .option:hover {
-    color: #2e7d32 !important;
-    background-color: rgba(46, 125, 50, 0.1); 
+
+  .navbar-nav {
+    display: block; /* Stack nav items vertically */
+    width: 100%;
   }
-  
-  .items .option.selected {
-    color: #fff !important; 
-    background-color: #2e7d32 !important; 
+
+  /* Adjust navbar brand */
+  .navbar-brand {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
   }
-  
-  .containermenu {
-    max-width: 1200px;
-    margin: 0 auto; 
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1.2rem; /* Smaller brand title on smaller screens */
   }
-  
-  .toggleeffect {
-    border: none;
-    background: none;
+
+  .nav-link {
+    font-size: 1rem; /* Slightly smaller font size */
   }
-  
-  .list {
-    display: flex;
-    justify-content: flex-end;
+
+  .navbar-toggler-icon {
+    width: 25px;
+    height: 2px;
   }
+
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    width: 25px;
+  }
+}

@@ -68,3 +68,28 @@ button {
 button:hover {
   background-color: #1b5e20; 
 }
+  /* Mobile Responsive Styles */
+  @media (max-width: 768px) {
+    .search-box {
+      position: relative; /* Remove absolute positioning */
+      top: auto; /* Reset top positioning */
+      right: 0px; /* Reset right positioning */
+      width: 90% !important; /* Set fixed width for mobile */
+      margin: 0 auto; /* Center align horizontally */
+      display: block; 
+    }
+  }
+  
+
+  
+  @media (max-width: 515px) {
+    .search-box {
+      position: relative; /* Remove absolute positioning */
+      top: auto; /* Reset top positioning */
+      right: 0px; /* Reset right positioning */
+      max-width: 90% !important; /* Set fixed width for mobile */
+      margin: 0 auto; /* Center align horizontally */
+      display: block; 
+    }
+  }
+  
