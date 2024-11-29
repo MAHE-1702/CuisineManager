@@ -1,0 +1,59 @@
+body{
+  background-image: url('./Utils/green\ background.webp');
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-size: cover; /* Ensures the image covers the full screen */
+  background-repeat: no-repeat; /* Prevents tiling of the image */
+  background-position: center center; /* Centers the image */
+  background-attachment: fixed;
+}
+
+.navigation {
+    background-color: #e8f5e8; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .title {
+    font-weight: 700 !important;
+    color: #2e7d32 !important;
+    margin-left: -300px;
+    margin-top: 10px;;
+  }
+  
+  .items .option {
+    font-weight: 500;
+    color: #333 !important; 
+    padding: 8px 15px;
+    border-radius: 4px; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .items .option:hover {
+    color: #2e7d32 !important;
+    background-color: rgba(46, 125, 50, 0.1); 
+  }
+  
+  .items .option.selected {
+    color: #fff !important; 
+    background-color: #2e7d32 !important; 
+  }
+  
+  .containermenu {
+    max-width: 1200px;
+    margin: 0 auto; 
+  }
+  
+  .toggleeffect {
+    border: none;
+    background: none;
+  }
+  
+  .list {
+    display: flex;
+    justify-content: flex-end;
+  }

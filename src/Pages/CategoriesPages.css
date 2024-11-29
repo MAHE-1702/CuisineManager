@@ -1,0 +1,122 @@
+
+
+.container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .card {
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  
+  
+  .card:hover {
+    transform: scale(1.2); 
+    box-shadow: 0 15px 40px rgba(54, 49, 49, 0.938)!important; 
+  }
+  
+  
+  .card img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover; 
+    border-bottom: 2px solid #ddd; 
+  }
+  
+  
+  .card-body {
+    text-align: center;
+    padding: 15px;
+    background-color: #f9f9f9; 
+  }
+  
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0; 
+  }
+  
+  
+  .add-cuisine-button {
+    position: fixed !important;
+    top: 20px !important; 
+    right: 20px; 
+    z-index: 1000; 
+    background-color: green !important;
+  }
+  
+  
+  .modal-header {
+    background-color: #f1f1f1;
+  }
+  
+  .modal-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .modal-footer {
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Form styles inside modal */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .search-box {
+    position: absolute;
+    top: 145px; 
+    right: 40px; 
+    width: 50%; 
+  
+    max-width: 500px; 
+    border-radius: 50px; 
+    transition: transform 0.3s ease, border 0.3s ease; 
+    border: 1px solid gray;
+    overflow: hidden;
+    background: white;
+    margin-top: 0px;
+    
+  }
+  
+  
+  .search-box:hover {
+    transform: scale(1.05); 
+  }
+  
+  
+  .search-box:focus-within {
+    border: 1px solid black;
+  }
+  
+  

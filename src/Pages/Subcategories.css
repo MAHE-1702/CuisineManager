@@ -1,0 +1,24 @@
+.search-box {
+    position: absolute;
+    top: 95px; 
+    right: 40px; 
+    width: 50%; 
+    max-width: 500px; 
+    border-radius: 50px; 
+    transition: transform 0.3s ease, border 0.3s ease; 
+    border: 1px solid gray;
+    overflow: hidden;
+    background: white;
+  }
+  
+  
+  .search-box:hover {
+    transform: scale(1.05); 
+  }
+  
+  
+  .search-box:focus-within {
+    border: 1px solid black;
+  }
+  
+  
